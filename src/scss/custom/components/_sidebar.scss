@@ -1,11 +1,59 @@
 .sidebar {
   @include fluid("width", 28rem, 40rem);
   @include fluid("right", -28rem, -40rem);
+  
+  @include fluidpadding(2rem);
+
   position: fixed;
   top: 0;
-  display: flex;
   transition: $defaultTransition;
   z-index: 102;
-  background-color: cyan;
+  background-color: map-get($color, "white");
   height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .sidebar-body {
+    display: flex;
+    flex-direction: column;
+
+    .sidebar-links {
+      @include fluid("font-size", 1.8rem);
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      
+      .sidebar-link {
+        text-decoration: none;
+        color: map-get($color, "black");
+      }
+    }
+
+    .sidebar-button {
+      @include fluidpaddingy(1rem);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .sidebar-logos {
+      display: flex;
+      align-items: center;
+
+      .img-1 {
+        @include fluid("width", 8rem);
+      }
+
+      .img-2 {
+        @include fluid("width", 15rem);
+      }
+    }
+  }
+
+  .sidebar-footer {
+    p {
+      @include fluid("font-size", 1.2rem);
+    }
+  }
 }

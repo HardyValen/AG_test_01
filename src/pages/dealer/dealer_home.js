@@ -20,7 +20,7 @@ const DealerHome = () => {
   return (
     <Fragment>
       <Navbar ref={navbarEl}>
-        <NavbarMain/>
+        <NavbarMain height={navbarHeight}/>
       </Navbar>
       <Layout style={{"margin-top": navbarHeight}}>
         <p>Hello World</p>

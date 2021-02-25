@@ -1,4 +1,4 @@
-import { forwardRef, useRef, useState } from "react";
+import { forwardRef, useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 import Assets from "../assets/AssetsCommon";
 import FrontendRoutes from "../routes/FrontendRoutes"
@@ -6,7 +6,7 @@ import Backdrop from "./_backdrop";
 import Hamburger from "./_navbar-hamburger";
 import Sidebar from "./_sidebar";
 
-const NavbarMain = () => {
+const NavbarMain = ({height}) => {
   const hamburgerEl = useRef(null);
   const sidebarEl = useRef(null);
   const backdropEl = useRef(null);
@@ -27,6 +27,10 @@ const NavbarMain = () => {
       backdropEl.current.classList.add("backdrop-hide")
     }
   }
+
+  useEffect(() => {
+    sidebarEl.current.style.paddingTop = `${height}px`;
+  }, [height])
 
   return (
     <div className="navbar-tabs navbar-main">

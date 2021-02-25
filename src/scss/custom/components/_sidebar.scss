@@ -1,0 +1,11 @@
+.sidebar {
+  @include fluid("width", 28rem, 40rem);
+  @include fluid("right", -28rem, -40rem);
+  position: fixed;
+  top: 0;
+  display: flex;
+  transition: $defaultTransition;
+  z-index: 102;
+  background-color: cyan;
+  height: 100vh;
+}

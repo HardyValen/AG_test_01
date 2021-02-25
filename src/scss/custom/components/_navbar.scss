@@ -1,0 +1,45 @@
+.navbar {
+  @include box-shadow();
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  background-color: map-get($color, "white");
+  
+  display: flex;
+  flex-direction: column;
+
+  .navbar-tabs {
+    @include fluidpaddingx(1.5rem, 2rem);
+    @include fluidpaddingy($navbar_min_padding_y, $navbar_max_padding_y);
+    width: 100%;
+  }
+  
+  .navbar-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navbar-main-company {
+      display: flex;
+      align-items: center;
+
+      .navbar-main-img {
+        @include fluid("height", 3rem, 4rem);
+      }
+  
+      .navbar-main-text {
+        @include fluid("margin-left", 1.2rem);
+  
+        .navbar-main-text-title {
+          @include fluid("font-size", $navbar_min_title_size, $navbar_max_title_size);
+          font-weight: 700;
+        }
+  
+        .navbar-main-text-subtitle {
+          @include fluid("font-size", $navbar_min_subtitle_size, $navbar_max_subtitle_size)
+        }
+      }
+    }
+  }
+}

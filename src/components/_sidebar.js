@@ -1,6 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { forwardRef, useEffect, useState } from "react"
 import Assets from "../assets/AssetsCommon";
+import LC_COPYRIGHT from "./jsx-literal-content/__copyright";
+import LC_TELEPON from "./jsx-literal-content/__telepon";
 
 const Sidebar = forwardRef((props, ref) => {
   // const [opacity, setOpacity] = useState(150)
@@ -16,8 +17,8 @@ const Sidebar = forwardRef((props, ref) => {
           <a className="sidebar-link mb-5" href="#">Sparepart</a>
           <a className="sidebar-link mb-5" href="#">Hubungi Kami</a>
         </div>
-        <div className="sidebar-button button color white primary-bg mb-6">
-          <FontAwesomeIcon icon={['fas', 'phone-alt']}/> (022) 5204645
+        <div className="sidebar-button button color white primary-bg primary-2-bg-hover mb-6">
+          <LC_TELEPON/>
         </div>
         <div className="sidebar-logos">
           <img className="img-1" src={Assets.haloSuzuki} alt=""/>
@@ -25,10 +26,7 @@ const Sidebar = forwardRef((props, ref) => {
         </div>
       </div>
       <div className="sidebar-footer">
-        <p>
-          &copy; 2020 Suzuki Indonesia.<br/>
-          All rights reserved.
-        </p>
+        <LC_COPYRIGHT/>
       </div>
     </div>
   )

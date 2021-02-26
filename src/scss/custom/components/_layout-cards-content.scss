@@ -1,0 +1,95 @@
+.layout-cards-content {
+  display: flex;
+  flex-direction: column;
+
+  .layout-content-title {
+    @include fluidpaddingx(2rem, 2rem);
+    @include fluid("padding-top", 3rem);
+    @include fluid("padding-bottom", 10rem);
+    background-color: map-get($color, "primary");
+    
+    h2 {
+      @include fluid("font-size", 1.8rem);
+      text-align: center;
+      color: white;
+    }
+
+    p {
+      @include fluid("font-size", 1.2rem);
+      text-align: center;
+      color: white;
+    }
+  }
+
+  .layout-cards-container {
+    @include fluidpaddingx(2rem);
+    @include fluid("margin-top", -6rem);
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .layout-card {
+      @include box-shadow();
+      @include fluid("border-radius", .5rem, 1rem);
+      width: 100%;
+      background-color: white;
+
+      &.card-article {
+        text-decoration: none;
+        color: initial;
+        transition: $defaultTransition;
+
+        &:hover h3{
+          color: map-get($color, "primary");
+          transition: $defaultTransition;
+        }
+      }
+
+      .layout-card-header{
+        @include fluid("border-top-left-radius", .5rem, 1rem);
+        @include fluid("border-top-right-radius", .5rem, 1rem); 
+        @include fluid("height", 20rem);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .layout-card-body {
+        @include fluidpadding(1.2rem, 2rem);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        .layout-card-tags {
+          @include fluid("font-size", 1.1rem);
+          @include fluidpaddingx(1rem);
+          @include fluidpaddingy(.3rem);
+          @include fluid("border-width", .05rem);
+          @include fluid("border-radius", .2rem);
+          border-style: solid;
+          border-color: map-get($color, "primary-light");
+          color: map-get($color, "primary-light");
+        }
+
+        h3 {
+          @include fluid("font-size", 1.5rem);
+        }
+        
+        p {
+          @include fluid("font-size", 1.2rem);
+          color: map-get($color, "gray-3");
+        }
+
+        .layout-button {
+          @include fluid("border-width", .2rem);
+          @include fluid("border-radius", .2rem);
+          width: 100%;
+          font-weight: 600;
+          outline: none;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

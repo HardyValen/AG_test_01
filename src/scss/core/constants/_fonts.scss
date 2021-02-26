@@ -47,9 +47,9 @@ $font-size-sm: $font-size-sm-floor, $font-size-sm-ceil;
 $font-size-annotation: $font-size-annotation-floor, $font-size-annotation-ceil;
 
 // Default Font Family
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Lato:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
 
-$font-type-base: 'Nunito', sans-serif;
+$font-type-base: 'Lato', sans-serif;
 $font-type-title: 'Merriweather', serif;
 $font-type-heading: $font-type-title;
 

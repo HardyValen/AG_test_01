@@ -75,7 +75,7 @@ body {
 
 .font.title {
   @include typography($font-size-title);
-  font-family: $font-type-heading;
+  font-family: $font-type-base;
   font-weight: $font-bold;
   line-height: 100%;
   // color: $color-title-default;
@@ -83,7 +83,7 @@ body {
 
 h1 {
   @include typography($font-size-h1);
-  font-family: $font-type-heading;
+  font-family: $font-type-base;
   font-weight: $font-bold;
   line-height: 100%;
   // color: $color-header-default;
@@ -91,7 +91,7 @@ h1 {
 
 h2 {
   @include typography($font-size-h2);
-  font-family: $font-type-heading;
+  font-family: $font-type-base;
   font-weight: $font-bold;
   line-height: 100%;
   // color: $color-header-default;
@@ -99,7 +99,7 @@ h2 {
 
 h3 {
   @include typography($font-size-h3);
-  font-family: $font-type-heading;
+  font-family: $font-type-base;
   font-weight: $font-bold;
   line-height: 100%;
 }

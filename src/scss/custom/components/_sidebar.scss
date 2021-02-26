@@ -37,9 +37,9 @@
     }
 
     .sidebar-button {
-      @include fluidpaddingy(1rem);
       font-weight: 700;
       text-align: center;
+      width: 100%;
     }
 
     .sidebar-logos {

@@ -1,3 +1,63 @@
 .layout {
-  height: 200vh;
+  width: 100%;
+  
+  .body {
+    background-color: map-get($color, "gray-5");
+  }
+
+  .footer-1 {
+    display: flex;
+    flex-direction: column;
+
+    .footer-1-links {
+      @include fluidpaddingy(2rem, 3.5rem);
+      @include fluid("border-bottom-width", .1rem);
+      border-bottom-style: solid;
+      border-bottom-color: map-get($color, "gray-5");
+      text-align: center;
+
+      a {
+        @include fluidmarginx(1rem);
+        // color: initial;
+        color: map-get($color, "primary-gray-1");
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+          color: map-get($color, "primary");
+        }
+      }
+    }
+
+    .footer-1-body {
+      text-align: center;
+
+      h3 {
+        @include fluid("font-size", 1.6rem);
+      }
+
+      p {
+        @include fluid("font-size", 1.4rem);
+      }
+
+      .footer-1-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  .footer-2 {
+    // background-color: black;
+    @include fluidpadding(2rem);
+    display: flex;
+    justify-content: center;
+    
+    p {
+      text-align: center;
+      @include fluid("font-size", 1.2rem);
+    }
+  }
 }

@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Project Version Changelog
 - v0.01 ~ Sidebar (26 Feb 2020)
-- v0.02 ~ Dealer Page (TBA)
+- v0.02 ~ Dealer Page (27 Feb 2020)
 
 Next Version
 - v0.03 ~ Outlet Page (TBA)

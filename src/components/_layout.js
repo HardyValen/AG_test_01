@@ -1,5 +1,3 @@
-import Backdrop from "./_backdrop"
-
 const Layout = ({children, style}) => {
 
   return (

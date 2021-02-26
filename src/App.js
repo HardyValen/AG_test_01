@@ -3,6 +3,7 @@
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import DealerHome from "./pages/dealer/dealer_home";
+import OutletHome from "./pages/outlet/outlet_home";
 import FrontendRoutes from "./routes/FrontendRoutes";
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
             <DealerHome/>
           </Route>
           <Route exact path={FrontendRoutes.outlet.home}>
-            Outlet
+            <OutletHome/>
           </Route>
           <Route exact path={FrontendRoutes.cars.xl7.home}>
             XL7

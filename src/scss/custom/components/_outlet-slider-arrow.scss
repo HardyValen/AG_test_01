@@ -1,0 +1,37 @@
+@mixin createArrow($orientation) {
+  @include fluid("width", 3rem);
+  #{$orientation}: 0;
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  cursor: pointer;
+
+  & > div > * {
+    transition: $defaultTransition;
+    @include box-shadow();
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  &:hover > div > * {
+    @if $orientation == left {
+      transform: translateX(-10%);
+    } @else {
+      transform: translateX(10%);
+    }
+  }
+}
+
+.slider-arrow-left {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+  @include createArrow(left)
+}
+
+.slider-arrow-right {
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+  @include createArrow(right)
+}

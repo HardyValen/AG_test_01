@@ -8,17 +8,25 @@
   .footer-1 {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     .footer-1-links {
       @include fluidpaddingy(2rem, 3.5rem);
+      @include fluidpaddingx(1rem);
       @include fluid("border-bottom-width", .1rem);
       border-bottom-style: solid;
       border-bottom-color: map-get($color, "gray-5");
-      text-align: center;
+      
+      // Scroll Behavior Warning!
+      max-width: 100vw; // Important for negate flex content overflow
+      overflow-x: hidden;
+
+      @include bp-max-width($bp-medium) {
+        overflow-x:scroll;
+      }
 
       a {
-        @include fluidmarginx(1rem);
-        // color: initial;
+        @include fluidpaddingx(2rem);
         color: map-get($color, "primary-gray-1");
         cursor: pointer;
         text-decoration: none;

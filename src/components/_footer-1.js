@@ -6,11 +6,12 @@ const Footer1 = ({classList, children}) => {
   return (
     <div className={["footer-1"].concat(classList).join(" ")}>
       <div className="footer-1-links">
-        <a href="#">Beranda</a>
-        <a href="#">Tentang Kami</a>
-        <a href="#">Outlet</a>
-        <a href="#">Blog</a>
-        <a href="#">Promo</a>
+        <a href="/">Beranda</a>
+        <a href="/">Tentang&nbsp;Kami</a>
+        <a href="/">Mobil</a>
+        <a href="/">Service</a>
+        <a href="/">Sparepart</a>
+        <a href="/">Hubungi&nbsp;Kami</a>
       </div>
       <div className="footer-1-body">
         <div className="my-6">

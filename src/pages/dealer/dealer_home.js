@@ -1,7 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef, useState, Fragment } from "react";
-import { Link } from "react-router-dom";
-import Assets from "../../assets/AssetsCommon";
 import DEALER_ARTIKEL_DATA from "../../components/jsx-literal-content/__dealer-artikel-data";
 import DEALER_OUTLET_DATA from "../../components/jsx-literal-content/__dealer-outlet-data";
 import Footer1 from "../../components/_footer-1";
@@ -11,7 +8,6 @@ import LayoutCard from "../../components/_layout-card";
 import LayoutCardArticle from "../../components/_layout-card-article";
 import Navbar from "../../components/_navbar";
 import NavbarMain from "../../components/_navbar-main";
-import FrontendRoutes from "../../routes/FrontendRoutes";
 
 const DealerHome = () => {
   const navbarEl = useRef(null);

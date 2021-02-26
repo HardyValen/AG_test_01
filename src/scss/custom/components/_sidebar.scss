@@ -18,6 +18,7 @@
   .sidebar-body {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 
     .sidebar-links {
       @include fluid("font-size", 1.8rem);
@@ -28,6 +29,10 @@
       .sidebar-link {
         text-decoration: none;
         color: map-get($color, "black");
+        
+        &:hover {
+          color: map-get($color, "primary");
+        }
       }
     }
 

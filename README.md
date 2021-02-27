@@ -8,7 +8,7 @@ Project Version Changelog
 - v0.03 ~ Outlet Page (27 Feb 2020)
 - v0.03.1 ~ Cars Page (Minus Modal, Cars Nav, Bottom Nav, and Collapsible Element) (28 Feb 2020)
 - v0.03.2 ~ Cars Page (Minus Modal, Cars Nav and Bottom Nav)
-- v0.03.2 ~ Cars Page (Minus Modal and Bottom Nav)
+- v0.03.3 ~ Cars Page (Minus Modal and Bottom Nav)
   
 Next Version
 - v0.04 ~ Cars Page (TBA)

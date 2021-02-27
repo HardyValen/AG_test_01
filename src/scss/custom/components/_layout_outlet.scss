@@ -90,9 +90,6 @@
 
       h3 { @include fluid("font-size", 2rem) }
       p { @include fluid("font-size", 1.4rem) }
-      .button {
-        // @include fluid("padding")
-      }
     }
   }
 }

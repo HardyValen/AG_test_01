@@ -20,6 +20,7 @@ import { XL7_SPEC_DATA, XL7_SPEC_RATIO_GEAR_DATA } from "../../components/jsx-li
 import JSONTableWrapper from "../../components/jsx-literal-content/_json-table-wrapper";
 import CarsXL7RatioCollapsible from "../../components/_cars-xl7-ratio-collapsible";
 import CarsXL7Nav from "../../components/_cars-xl7-nav";
+import Assets from "../../assets/AssetsCommon";
 
 const CarsXL7 = () => {
   const navbarEl = useRef(null);
@@ -77,6 +78,7 @@ const CarsXL7 = () => {
             <CarsXL7Showcase data={XL7_INTERIOR_DATA} id="interior"/>
 
             <div className="p-6" id="spesifikasi">
+              <h3>SPESIFIKASI</h3>
               {XL7_SPEC_DATA.map((spec, index) => {
                 return (
                   <CollapsibleWrapper key={index} title={spec.value}>
@@ -100,7 +102,29 @@ const CarsXL7 = () => {
         </LayoutBody>
         <Footer1/>
         <Footer2 classList="color primary-bg white"/>
+
+        <div className="footer-3">
+          <div className="footer-3-container row">
+            <div className="col-6 button color primary-bg white primary-border primary-2-bg-hover primary-2-border-hover">
+              Booking mobil
+            </div>
+            <div className="col-3 flex justify-content-center align-items-center footer-3-link">
+              <div className="footer-3-icon">
+                <img src={Assets.wa} alt=""/>
+                <p className="font size-annotation weight-bold mt-1">Whatsapp</p>
+              </div>
+            </div>
+            <div className="col-3 flex justify-content-center align-items-center footer-3-link">
+              <div className="footer-3-icon">
+                <img src={Assets.sk} alt=""/>
+                <p className="font size-annotation weight-bold mt-1">Simulasi Kredit</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
       </Layout>
+      {/* Footer 3 */}
     </Fragment>
   );
 }

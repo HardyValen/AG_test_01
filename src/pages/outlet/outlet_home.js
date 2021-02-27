@@ -99,6 +99,36 @@ const DealerHome = () => {
         </LayoutBody>
         <Footer1/>
         <Footer2 classList="color primary-bg white"/>
+
+        <div className="footer-3">
+          <div className="footer-3-container row">
+            <div className="col-3 flex justify-content-center align-items-center footer-3-link">
+              <div className="footer-3-icon">
+                <img src={Assets.wa} alt=""/>
+                <p className="font size-annotation weight-bold mt-1">Whatsapp</p>
+              </div>
+            </div>
+            <div className="col-3 flex justify-content-center align-items-center footer-3-link">
+              <div className="footer-3-icon">
+                <img src={Assets.dh} alt=""/>
+                <p className="font size-annotation weight-bold mt-1">Daftar Harga</p>
+              </div>
+            </div>
+            <div className="col-3 flex justify-content-center align-items-center footer-3-link">
+              <div className="footer-3-icon">
+                <img src={Assets.ps} alt=""/>
+                <p className="font size-annotation weight-bold mt-1">Pesan Servis</p>
+              </div>
+            </div>
+            <div className="col-3 flex justify-content-center align-items-center footer-3-link">
+              <div className="footer-3-icon">
+                <img src={Assets.sk} alt=""/>
+                <p className="font size-annotation weight-bold mt-1">Simulasi Kredit</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </Layout>
     </Fragment>
   );

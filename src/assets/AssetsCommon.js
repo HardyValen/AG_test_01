@@ -66,4 +66,9 @@ Assets.cars.x7.zeta = [
   "https://sibaturaspirman.github.io/suzuki/assets/images/content/xl7-zeta-4.png"
 ]
 
+Assets.wa = "https://sibaturaspirman.github.io/suzuki/assets/images/icons/wa.svg";
+Assets.sk = "https://sibaturaspirman.github.io/suzuki/assets/images/icons/sk.svg";
+Assets.ps = "https://sibaturaspirman.github.io/suzuki/assets/images/icons/ps.svg";
+Assets.dh = "https://sibaturaspirman.github.io/suzuki/assets/images/icons/dh.svg";
+
 export default Assets;

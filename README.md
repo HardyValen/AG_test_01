@@ -6,6 +6,7 @@ Project Version Changelog
 - v0.02 ~ Dealer Page (27 Feb 2020)
 - v0.02.1 ~ Outlet Page Slider (27 Feb 2020)
 - v0.03 ~ Outlet Page (27 Feb 2020)
+- v0.03.1 ~ Outlet Page (Minus Modal and Collapsible Element) (28 Feb 2020)
   
 Next Version
 - v0.04 ~ Cars Page (TBA)

@@ -46,4 +46,102 @@
       }
     }
   }
+
+  .layout-cars-types {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .cars-types-tabs {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      h3 {
+        @include fluid("font-size", 1.8rem);
+      }
+
+      .cars-types-tab {
+        @include fluid("border-bottom-width", .2rem);
+        color: rgba(map-get($color, "primary"), 0.4);
+        border-bottom-color: rgba(map-get($color, "primary"), 0.4);
+        border-bottom-style: solid;
+        font-weight: 600;
+        transition: $defaultTransition;
+        cursor: pointer;
+
+        &:hover, &.active {
+          color: map-get($color, "primary");
+          border-bottom-color: map-get($color, "primary");
+        }
+      }
+    }
+
+    .cars-info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .cars-info-title {
+        @include fluid("font-size", 1.4rem);
+        font-weight: 600;
+        text-align: center;
+      }
+
+      img {
+        @include fluid("height", 24rem);
+        width: 100%;
+        @include fluidpadding(2rem);
+      }
+
+      .cars-info-color-tabs {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .cars-info-color-tab {
+          $size: (3rem, 4rem);
+
+          @include fluid("width", nth($size, 1), nth($size, 2));
+          @include fluid("height", nth($size, 1), nth($size, 2));
+          @include fluid("border-width", .2rem);
+          border-style: solid;
+          border-color: map-get($color, "white");
+          border-radius: 50%;  
+
+          @include box-shadow();
+          transition: $defaultTransition;
+          cursor: pointer;
+
+          &:hover, &.active {
+            border-color: map-get($color, "primary");
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.car-showcase {
+  display: flex;
+  flex-direction: column;
+
+  .car-showcase-title {
+    text-align: center;
+  }
+
+  .car-showcase-pills {
+    display: flex;
+    flex-direction: column;
+
+    .car-showcase-pill {
+      @include fluid("border-radius", .5rem);
+      @include box-shadow();
+      background-color: #F1F5F6;
+    }
+  }
 }

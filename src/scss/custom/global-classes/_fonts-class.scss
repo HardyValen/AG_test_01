@@ -12,7 +12,7 @@ $font-sizes: (
 );
 
 @each $key, $value in $font-sizes {
-  .font.#{$key} {
+  .font.size-#{$key} {
     @include typography($value);
   }
 }
@@ -25,7 +25,7 @@ $font-weights: (
 );
 
 @each $key, $value in $font-weights {
-  .font.#{$key} {
+  .font.weight-#{$key} {
     font-weight: $value;
   }
 }
@@ -38,7 +38,7 @@ $font-types: (
 );
 
 @each $key, $value in $font-types {
-  .font.#{$key} {
+  .font.type-#{$key} {
     font-family: $value;
   }
 }

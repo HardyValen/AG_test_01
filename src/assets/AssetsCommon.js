@@ -37,4 +37,33 @@ Assets.outlet.mobil06 = "https://sibaturaspirman.github.io/suzuki/assets/images/
 Assets.outlet.pemesanan = BG_PEMESANAN;
 Assets.outlet.sukucadang = BG_SUKUCADANG;
 
+Assets.cars = {
+  x7: {
+    alpha: [],
+    beta: [],
+    zeta: [],
+  }
+}
+
+Assets.cars.x7.alpha = [
+  "https://sibaturaspirman.github.io/suzuki/assets/images/content/xl7-alpha-1.png",
+  "https://sibaturaspirman.github.io/suzuki/assets/images/content/xl7-alpha-2.png",
+  "https://sibaturaspirman.github.io/suzuki/assets/images/content/xl7-alpha-3.png",
+  "https://sibaturaspirman.github.io/suzuki/assets/images/content/xl7-alpha-4.png"
+]
+
+Assets.cars.x7.beta = [
+  "https://sibaturaspirman.github.io/suzuki/assets/images/content/xl7-beta-1.png",
+  "https://sibaturaspirman.github.io/suzuki/assets/images/content/xl7-beta-2.png",
+  "https://sibaturaspirman.github.io/suzuki/assets/images/content/xl7-beta-3.png",
+  "https://sibaturaspirman.github.io/suzuki/assets/images/content/xl7-beta-4.png"
+]
+
+Assets.cars.x7.zeta = [
+  "https://sibaturaspirman.github.io/suzuki/assets/images/content/xl7-zeta-1.png",
+  "https://sibaturaspirman.github.io/suzuki/assets/images/content/xl7-zeta-2.png",
+  "https://sibaturaspirman.github.io/suzuki/assets/images/content/xl7-zeta-3.png",
+  "https://sibaturaspirman.github.io/suzuki/assets/images/content/xl7-zeta-4.png"
+]
+
 export default Assets;

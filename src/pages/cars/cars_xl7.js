@@ -19,6 +19,7 @@ import CollapsibleWrapper from "../../components/__collapsible-wrapper";
 import { XL7_SPEC_DATA, XL7_SPEC_RATIO_GEAR_DATA } from "../../components/jsx-literal-content/__xl7-cars-spec-data";
 import JSONTableWrapper from "../../components/jsx-literal-content/_json-table-wrapper";
 import CarsXL7RatioCollapsible from "../../components/_cars-xl7-ratio-collapsible";
+import CarsXL7Nav from "../../components/_cars-xl7-nav";
 
 const CarsXL7 = () => {
   const navbarEl = useRef(null);
@@ -48,12 +49,15 @@ const CarsXL7 = () => {
     <Fragment>
       <Navbar ref={navbarEl}>
         <NavbarMain height={navbarHeight} title={"SUZUKI NJS BUAH BATU"} subtitle={"PT. Nusantara Jaya Sentosa"}/>
+        <div className="navbar-tabs font weight-bold size-base">XL 7</div>
+        <CarsXL7Nav/>
       </Navbar>
-      <Layout style={{"margin-top": navbarHeight}}>
+
+      <Layout style={{"position": "relative", "top": navbarHeight}}>
         <LayoutBody>
           <Slider {...settings}>
             {XL7_SLIDER_DATA.map((data, index) => {
-              return <SliderContent data={data} key={index}/>
+              return <SliderContent data={data} key={index} id="overview"/>
             })}
           </Slider>
 
@@ -69,10 +73,10 @@ const CarsXL7 = () => {
             </div>
 
             <CarsXL7Types/>
-            <CarsXL7Showcase data={XL7_EXTERIOR_DATA}/>
-            <CarsXL7Showcase data={XL7_INTERIOR_DATA}/>
+            <CarsXL7Showcase data={XL7_EXTERIOR_DATA} id="exterior"/>
+            <CarsXL7Showcase data={XL7_INTERIOR_DATA} id="interior"/>
 
-            <div className="p-6">
+            <div className="p-6" id="spesifikasi">
               {XL7_SPEC_DATA.map((spec, index) => {
                 return (
                   <CollapsibleWrapper key={index} title={spec.value}>
@@ -91,7 +95,7 @@ const CarsXL7 = () => {
 
               <CarsXL7RatioCollapsible/>
             </div>
-            <CarsXL7Pricelist data={XL7_CARS_PRICE_DATA}/>
+            <CarsXL7Pricelist data={XL7_CARS_PRICE_DATA} id="harga"/>
           </div>
         </LayoutBody>
         <Footer1/>

@@ -14,6 +14,36 @@
     @include fluidpaddingy($navbar_min_padding_y, $navbar_max_padding_y);
     width: 100%;
   }
+
+  .page-nav-wrapper {
+    display: flex;
+    max-width: 100vw;
+    overflow-x: hidden;
+
+    @include bp-max-width($bp-medium) {
+      overflow-x:scroll;
+    }
+
+    .page-nav-pill {
+      @include fluid("border-bottom-width", .2rem);
+      @include fluidpaddingx(1.5rem);
+      @include fluidpaddingy(1rem);
+      cursor: pointer;
+
+      color: inherit;
+      text-decoration: none;
+      font-weight: 600;
+
+      color: rgba(map-get($color, "primary"), 0.4);
+      border-bottom-style: solid;
+      border-bottom-color: map-get($color, "gray-2");
+
+      &:hover, &.active {
+        color: map-get($color, "primary");
+        border-bottom-color: map-get($color, "primary");
+      }
+    }
+  }
   
   .navbar-main {
     display: flex;

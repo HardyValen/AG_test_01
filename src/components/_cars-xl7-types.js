@@ -2,13 +2,12 @@ import { Fragment, useState } from "react"
 import Assets from "../assets/AssetsCommon";
 import XL7_CARS_DATA from "./jsx-literal-content/__xl7-cars-data"
 
-const CarsXL7Types = () => {
+const CarsXL7Types = ({id = "tipe-warna"} = {}) => {
   const [slide, setSlide] = useState(0);
   const [subSlide, setSubSlide] = useState(0);
 
-
   return (
-    <div className="layout-cars-types p-5 color white-bg">
+    <div className="layout-cars-types p-5 color white-bg" id={id}>
       <h3 className="my-5">TIPE & WARNA</h3>
       <div className="cars-types-tabs">
         {Object.keys(XL7_CARS_DATA).map((data, index) => {

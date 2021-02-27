@@ -1,10 +1,10 @@
 $height: 0.2rem;
 
 .hamburger {
-  @include fluid("width", 4rem, 6rem);
-  @include fluid("height", 4rem, 6rem);
-  @include fluidpaddingy(0.5rem, 1rem);
-  @include fluidpaddingx(1rem, 1.5rem);
+  @include fluid("width", 4rem,);
+  @include fluid("height", 4rem);
+  @include fluidpaddingy(0.5rem);
+  @include fluidpaddingx(1rem);
   position: relative;
 
   display: flex;
@@ -30,22 +30,22 @@ $height: 0.2rem;
     transition: $defaultTransition;
 
     &.line1 {
-      @include fluid("top", 1rem - ($height / 2), 1.5rem - ($height / 2));
+      @include fluid("top", 1rem - ($height / 2));
     }
 
     &.line2 {
-      @include fluid("top", 2rem - ($height / 2), 2.5rem - ($height / 2));
+      @include fluid("top", 2rem - ($height / 2));
     }
   }
 
   &.active {
     & .line1 {
-      @include fluid("top", 1.5rem, 2rem);
+      @include fluid("top", 1.5rem);
       transform: rotateZ(-45deg) rotateY(180deg);
     }
 
     & .line2 {
-      @include fluid("top", 1.5rem - ($height), 2rem - ($height));
+      @include fluid("top", 1.5rem - ($height));
       transform: rotate(45deg) rotateY(-180deg);
     }
   }

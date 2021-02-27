@@ -141,7 +141,15 @@
     .car-showcase-pill {
       @include fluid("border-radius", .5rem);
       @include box-shadow();
-      background-color: #F1F5F6;
+      background-color: map-get($color, "primary-lighter");
     }
+  }
+}
+
+.cars-table-spec-wrapper {
+  & > tbody > tr > td, tbody > tr > th {
+    @include fluidpaddingx(1rem);
+    @include fluidpaddingy(.3rem);
+    text-align: start;
   }
 }

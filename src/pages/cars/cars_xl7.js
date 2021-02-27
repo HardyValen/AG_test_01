@@ -15,11 +15,14 @@ import XL7_EXTERIOR_DATA from "../../components/jsx-literal-content/__xl7-cars-e
 import LayoutBody from "../../components/_layout-body-wrapper";
 import CarsXL7Pricelist from "../../components/_cars-xl7-pricelist";
 import XL7_CARS_PRICE_DATA from "../../components/jsx-literal-content/__xl7-cars-pricelist-data";
+import CollapsibleWrapper from "../../components/__collapsible-wrapper";
+import { XL7_SPEC_DATA, XL7_SPEC_RATIO_GEAR_DATA } from "../../components/jsx-literal-content/__xl7-cars-spec-data";
+import JSONTableWrapper from "../../components/jsx-literal-content/_json-table-wrapper";
+import CarsXL7RatioCollapsible from "../../components/_cars-xl7-ratio-collapsible";
 
 const CarsXL7 = () => {
   const navbarEl = useRef(null);
   const [navbarHeight, setNavbarHeight] = useState(null)
-  // const [active, setActive] = useState(1);
 
   const settings = {
     centerMode: true,
@@ -69,6 +72,25 @@ const CarsXL7 = () => {
             <CarsXL7Showcase data={XL7_EXTERIOR_DATA}/>
             <CarsXL7Showcase data={XL7_INTERIOR_DATA}/>
 
+            <div className="p-6">
+              {XL7_SPEC_DATA.map((spec, index) => {
+                return (
+                  <CollapsibleWrapper key={index} title={spec.value}>
+                    <table className="cars-table-spec-wrapper">
+                      <tbody>
+                        {Object.entries(spec.data).map((data, index) => {
+                          return (
+                            <JSONTableWrapper entries={data} key={index}/>
+                          )
+                        })}
+                      </tbody>
+                    </table>
+                  </CollapsibleWrapper>
+                )
+              })}
+
+              <CarsXL7RatioCollapsible/>
+            </div>
             <CarsXL7Pricelist data={XL7_CARS_PRICE_DATA}/>
           </div>
         </LayoutBody>

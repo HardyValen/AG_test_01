@@ -10,9 +10,10 @@ Project Version Changelog
 - v0.03.2 ~ Cars Page (Minus Modal, Cars Nav and Bottom Nav) (28 Feb 2020)
 - v0.03.3 ~ Cars Page (Minus Modal and Bottom Nav) (28 Feb 2020)
 - v0.03.4 ~ Cars Page (Minus Modal) (28 Feb 2020)
+- v0.03.5 ~ Completed Pages. Not Enough Time for Modal tho... (28 Feb 2020)
   
 Next Version
-- v0.04 ~ Cars Page (TBA)
+- v0.04 ~ Finishing All (TBA)
   
 ## Available Scripts
 

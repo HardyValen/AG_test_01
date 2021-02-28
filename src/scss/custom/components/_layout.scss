@@ -76,7 +76,8 @@
 
     .footer-3-container {
       @include box-shadow();
-      @include fluidpadding(2rem);
+      @include fluidpaddingx(1rem, 2rem);
+      @include fluidpaddingy(1rem);
       @include fluid("border-radius", .5rem);
       background-color: white;
 
@@ -97,6 +98,10 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+
+          img {
+            @include fluid("height", 3rem, 4rem);
+          }
         }
       }
     }

@@ -22,9 +22,10 @@ import CarsXL7RatioCollapsible from "../../components/_cars-xl7-ratio-collapsibl
 import CarsXL7Nav from "../../components/_cars-xl7-nav";
 import Assets from "../../assets/AssetsCommon";
 
-const CarsXL7 = () => {
+const CarsXL7 = ({handler}) => {
   const navbarEl = useRef(null);
   const [navbarHeight, setNavbarHeight] = useState(null)
+  
 
   const settings = {
     centerMode: true,
@@ -104,8 +105,8 @@ const CarsXL7 = () => {
         <Footer2 classList="color primary-bg white"/>
 
         <div className="footer-3">
-          <div className="footer-3-container row">
-            <div className="col-6 button color primary-bg white primary-border primary-2-bg-hover primary-2-border-hover">
+          <div className="footer-3-container row align-items-center">
+            <div className="col-6 button color primary-bg white primary-border primary-2-bg-hover primary-2-border-hover" onClick={handler.handleOpenModal}>
               Booking mobil
             </div>
             <div className="col-3 flex justify-content-center align-items-center footer-3-link">
@@ -124,7 +125,6 @@ const CarsXL7 = () => {
         </div>
         
       </Layout>
-      {/* Footer 3 */}
     </Fragment>
   );
 }
